@@ -1,9 +1,10 @@
+import { HeaderPriv } from "./components/layouts/private/HeaderPriv"
 
 function App() {
 
   return (
     <>
-      <h1>SOCIAL NET</h1>
+      <HeaderPriv />
     </>
   )
 }
