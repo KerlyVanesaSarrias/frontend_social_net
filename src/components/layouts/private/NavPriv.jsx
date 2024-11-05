@@ -1,4 +1,4 @@
-import avatar from '../../../assets/img/default.png'
+// import avatar from '../../../assets/img/default.png'
 export const NavPriv = () => {
 
   return (

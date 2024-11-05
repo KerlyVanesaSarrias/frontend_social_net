@@ -1,10 +1,11 @@
-import { HeaderPriv } from "./components/layouts/private/HeaderPriv"
+
+import { Routing } from "./router/routing"
 
 function App() {
 
   return (
     <>
-      <HeaderPriv />
+      <Routing />
     </>
   )
 }

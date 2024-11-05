@@ -1,4 +1,4 @@
-import { NavPub } from "./NavPub"
+import { NavPub } from "./NavPub.jsx"
 
 export const HeaderPub = () => {
   return (

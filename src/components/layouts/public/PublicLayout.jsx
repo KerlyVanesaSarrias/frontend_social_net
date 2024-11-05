@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { HeaderPub } from "./HeaderPub";
+import { HeaderPub } from "./HeaderPub.jsx";
 
 export const PublicLayout = () => {
   return (

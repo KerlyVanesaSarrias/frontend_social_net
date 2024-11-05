@@ -1,4 +1,4 @@
-import { NavPriv } from "./NavPriv";
+import { NavPriv } from "./NavPriv.jsx";
 
 export const HeaderPriv = () => {
     return (
