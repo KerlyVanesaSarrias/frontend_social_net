@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import avatar from '../../../assets/img/default.png'
 export const NavPriv = () => {
 
@@ -6,24 +7,24 @@ export const NavPriv = () => {
 
       <ul className="container-lists__menu-list">
         <li className="menu-list__item">
-          <a href='#' className="menu-list__link">
+          <NavLink to='/feed' className="menu-list__link">
             <i className="fa-solid fa-house"></i>
             <span className="menu-list__title">Inicio</span>
-          </a>
+          </NavLink>
         </li>
 
         <li className="menu-list__item">
-          <a href='#' className="menu-list__link">
+          <NavLink to='/feed' className="menu-list__link">
             <i className="fa-solid fa-list"></i>
             <span className="menu-list__title">Timeline</span>
-          </a>
+          </NavLink>
         </li>
 
         <li className="menu-list__item">
-          <a href='#' className="menu-list__link">
+          <NavLink to='/people' className="menu-list__link">
             <i className="fa-solid fa-users"></i>
             <span className="menu-list__title">Gente</span>
-          </a>
+          </NavLink>
         </li>
       </ul>
 
