@@ -7,21 +7,21 @@ export const NavPriv = () => {
 
       <ul className="container-lists__menu-list">
         <li className="menu-list__item">
-          <NavLink to='/feed' className="menu-list__link">
+          <NavLink to='feed' className="menu-list__link">
             <i className="fa-solid fa-house"></i>
             <span className="menu-list__title">Inicio</span>
           </NavLink>
         </li>
 
         <li className="menu-list__item">
-          <NavLink to='/feed' className="menu-list__link">
+          <NavLink to='feed' className="menu-list__link">
             <i className="fa-solid fa-list"></i>
             <span className="menu-list__title">Timeline</span>
           </NavLink>
         </li>
 
         <li className="menu-list__item">
-          <NavLink to='/people' className="menu-list__link">
+          <NavLink to='people' className="menu-list__link">
             <i className="fa-solid fa-users"></i>
             <span className="menu-list__title">Gente</span>
           </NavLink>
@@ -40,10 +40,10 @@ export const NavPriv = () => {
           </a>
         </li>
         <li className="list-end__item">
-          <a href='#'className="list-end__link">
+          <NavLink to='settings'className="list-end__link">
           <i className="fa-solid fa-gear"></i>
             <span className="list-end__name">Ajustes</span>
-          </a>
+          </NavLink>
         </li>
         <li className="list-end__item">
           <a href='#' className="list-end__link">
