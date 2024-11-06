@@ -5,26 +5,19 @@ import { Global } from '../../helpers/Global.jsx';
 import Swal from 'sweetalert2';
 
 export const Register = () => {
-  
-  // Usar el hook personalizado useForm para cargar los datos del formulario
+
   const { form, changed } = useForm({});
 
-  // Estado para mostrar el resultado del registro del user en la BD
   const [ saved, setSaved ] = useState("not sended");
 
-  // Hook para redirigir
   const navigate = useNavigate();
 
-  // Método Guardar un usuario en la BD
   const saveUser = async (e) => {
 
-    // Prevenir que se actualice la pantalla
     e.preventDefault();
 
-    // Obtener los datos del formulario
     let newUser = form;
 
-    // Petición a la API (Backend) para guardar el usuario en la BD
     const request = await fetch(Global.url + 'user/register', {
       method: 'POST',
       body: JSON.stringify(newUser),
@@ -33,28 +26,22 @@ export const Register = () => {
       }
     });
 
-    // Obtener la información retornada por el backend
     const data = await request.json();
 
-      console.log('data', data)
-    // Verificar si el estado de la respuesta es "created" seteamos la variable de estado saved con "saved"
     if(request.status === 200 && data.status === "created"){
       setSaved("saved");
 
-      // Mostrar el modal de éxito
       Swal.fire({
         title: data.message,
         icon: 'success',
         confirmButtonText: 'Continuar',
       }).then(() => {
-        // Redirigir después de cerrar el modal
         navigate('/login');
       });
 
     } else {
       setSaved("error");
 
-      // Mostrar el modal de error
       Swal.fire({
         title: data.message || "¡Error en el registro!",
         icon: 'error',
@@ -69,11 +56,9 @@ export const Register = () => {
         <h1 className="content__title">Registro</h1>
       </header>
 
-      {/* Formulario de Registro*/}
       <div className="content__posts">
         <div className="form-style">
 
-          {/* Respuesta de usuario registrado */}
           {saved == "saved" ? (
             <strong className="alert alert-success">¡Usuario registrado correctamente!</strong>
           ) : ''}
@@ -96,11 +81,11 @@ export const Register = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="last_name">Apellidos</label>
+              <label htmlFor="lastName">Apellidos</label>
               <input
                 type="text"
-                id="last_name"
-                name="last_name"
+                id="lastName"
+                name="lastName"
                 required
                 onChange={changed}
                 value={form.last_name || ''}
