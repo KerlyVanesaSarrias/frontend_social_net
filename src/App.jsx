@@ -1,5 +1,5 @@
+import { Routing } from "./router/routing.jsx"
 
-import { Routing } from "./router/routing"
 
 function App() {
 
