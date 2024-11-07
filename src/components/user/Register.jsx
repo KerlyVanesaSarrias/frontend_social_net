@@ -88,7 +88,7 @@ export const Register = () => {
                 name="lastName"
                 required
                 onChange={changed}
-                value={form.last_name || ''}
+                value={form.lastName || ''}
                 autoComplete="family-name"
               />
             </div>
