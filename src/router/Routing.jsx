@@ -35,8 +35,8 @@ export const Routing = () => {
                     <Route path="/rsocial" element={<PrivateLayout />}>
                         <Route index element={<Feed />} />
                         <Route path="feed" element={<Feed />} />
-                        <Route path="people" element={<People />} />
-                        <Route path="settings" element={<Config />} />
+                        <Route path="gente" element={<People />} />
+                        <Route path="ajustes" element={<Config />} />
                         <Route path='logout' element={<Logout />} />
                         <Route path='siguiendo/:userId' element={<Following />} />
                         <Route path='seguidores/:userId' element={<Followers />} />
